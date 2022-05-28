@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  app:
+    build: ./docker/app/
+    user: "node:node"
+    container_name: "${CONTAINER_NAME}"
+    environment:
+      NODE_ENV: "development"
+    volumes:
+      - ./workspace:/usr/src/app/workspace
+    working_dir: "/usr/src/app/workspace/"
+    ports:
+      - "${WEB_HOST_PORT}:${WEB_CONTAINER_PORT}"
+    tty: true
