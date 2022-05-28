@@ -1,9 +1,10 @@
 <script lang="ts">
   import Router, { push } from "svelte-spa-router";
+  import Header from "./component/layout/Header.svelte";
   import routes from "./router";
 </script>
 
-<header class="bg-gray-300"><button class="bg-green-200" on:click={() => push("/")}>home</button></header>
+<Header />
 <main>
   <Router {routes} />
 </main>
