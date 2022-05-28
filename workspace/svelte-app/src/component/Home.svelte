@@ -1,6 +1,7 @@
 <script lang="ts">
   import { push } from "svelte-spa-router";
+import Button from "./module/Button.svelte";
+import {movePage} from "../functions/routerFunc"
 </script>
-<button class="bg-red-300" on:click={() => push("/props_labo")}
-  >props_labo</button
->
+  <Button title={"props_labo"} on:buttonClick={() => movePage({ path: "/props_labo" })} />
+  <Button title={"js_labo"} on:buttonClick={() => movePage({ path: "/js_labo" })} />

@@ -3,11 +3,10 @@
   import routes from "../../router";
   import Button from "../module/Button.svelte";
   import { movePage } from "../../functions/routerFunc";
-
 </script>
 
-<header class="bg-gray-300">
-  <Button on:buttonClick={()=>movePage("/")}>home</Button>
+<header class="bg-gray-300 p-2">
+  <Button title={"HOME"} on:buttonClick={() => movePage({ path: "/" })} />
 </header>
 
 <style lang="postcss">
