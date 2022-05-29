@@ -7,9 +7,10 @@
   function onclickHundle() {
     dispatch("buttonClick");
   }
+
 </script>
 
-<button class="bg-green-200" on:click={onclickHundle}>{title}</button>
+<button class="bg-green-200 p-1" on:click={onclickHundle}>{title}</button>
 
 <style lang="postcss">
 </style>
